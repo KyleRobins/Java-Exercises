@@ -20,30 +20,9 @@ public class Main {
         System.out.print("Enter the second number: ");
         double num2 = Double.parseDouble(scanner.nextLine());
 
-        // Perform the arithmetic operation based on the operator
-        double result = 0.0;
-
-        if (operator.equals("+")) {
-            result = num1 + num2;
-        } else if (operator.equals("-")) {
-            result = num1 - num2;
-        } else if (operator.equals("*")) {
-            result = num1 * num2;
-        } else if (operator.equals("/")) {
-            if (num2 != 0) {
-                result = num1 / num2;
-            } else {
-                System.out.println("Error: Division by zero is not allowed.");
-                return; // Terminate the program if division by zero occurs
-            }
-        } else if (operator.equals("%")) {
-            result = num1 % num2;
-        } else {
-            System.out.println("Error: Invalid operator.");
-            return; // Terminate the program if an invalid operator is entered
-        }
-
-        System.out.println("Result: " + result);
+        //initialize main class and pass the values
+        var main = new Main();
+        System.out.println(main.main(num1, num2, operator));
 
     }
 private double number1, number2;
